@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGEn</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header>
+            <nav>
+                <a href="">
+                <img src="" alt="">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="offer.html">What we do</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            </nav>
+    </header>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>We Build Websites That Bring You Customers</h1>
+                <p>Helping small businesses grow with social media marketing and high-converting websites.</p>
+    
+
+            </div>
+        </section>
+
+        <!-- Features -->
+        
+        <section class="features">
+            <div class="features-container">
+
+                <!-- Left Side -->
+                <div class="features-left">
+                    <h2>Why Choose Us</h2>
+                    <p>We build digital solutions that help your business grow faster.</p>
+                
+                    <div class="feature">
+                        <h3>Result-Focused Strategy</h3>
+                        <p>We use data-driven methods to increase your ROI.</p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Custom Websites</h3>
+                        <p>Fast, responsive, and built to convert visitors.</p>
+                    </div>
+
+                    <div class="feature">
+                <h3>Social Media Growth</h3>
+                <p>Reach the right audience and grow your brand.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Affordable Pricing</h3>
+                <p>Perfect for startups and small businesses.</p>
+            </div>
+            </div>
+            <!-- Right Side -->
+
+            <div class="features-right">
+            <img src="images/1.png" class="active">
+            <img src="images/2.png">
+            <img src="images/3.png">
+            <img src="images/4.png">
+
+        </div>
+
+            </div>
+        </section>
+
+
+        <!-- Work Section -->
+        <section class="work">
+            <div class="work-container">
+                <h2>What We Can Do</h2>
+                <p>Here are some examples of what we can build to grow your business.</p>
+                
+                <div class="work-grid">
+
+                    <div class="work-card">
+                        <img src="images/work1.png">
+                        <div class="work-overlay">
+                            <h3>Restaurant Website</h3>
+                            <p>Online menu + booking system</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <img src="images/work2.png">
+                            <div class="work-overlay">
+                                <h3>E-commerce Store</h3>
+                                <p>Product-focused design</p>
+                            </div>
+                    </div>
+                    <div class="work-card">
+                        <img src="images/work3.">
+                            <div class="work-overlay">
+                            <h3>Social Media Campaign</h3>
+                            <p>Brand growth strategy</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                <img src="images/work4.jpg">
+                <div class="work-overlay">
+                    <h3>Landing Page</h3>
+                    <p>High-converting design</p>
+                </div>
+            </div>
+        </div>
+        <!-- CTA -->
+        <div class="work-cta">
+            <h3>Have a project in mind?</h3>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <footer>
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>Visit Us</h3>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: 1234567890</p>
+                    <p>Phone: 1234567890</p>
+                    <p>Email: info@gmail.com</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+        </footer>
+    
+        <script>
+            const images = document.querySelectorAll(".features-right img")
+            let index = 0;
+
+            setInterval(() => {
+                images[index].classList.remove("active")
+                index = (index + 1) % images.length
+                images[index].classList.add("active")
+            }, 3000);
+        </script>
+</body>
+</html>
