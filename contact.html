@@ -32,62 +32,127 @@
                 </nav>
         </header>
 
-
-        <section class="contact-section">
-            <h1>Contact Us</h1>
-
-            <div class="static-contact">
-                <h2>
-                    <p>Phone: </p>
-                    <p>Email: </p>
-                    <p>WhatsApp: </p>
-                </h2>
-            </div>
-
-            <div class=social-media>
-                <h2>Follow Us on</h2>
-                <a href="">Facebook</a>
-                <a href="">LinkedIn</a>
-                <a href="">Tiktok</a>
-            </div>
-        </section>
-
         
 
-        <section class="contact-form">
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-glass">
 
-            <div class="form-container">
-                <div class="form-content">
-                    <span class="close-btn">&times;</span>
-                    <h2>Make An Inquiry</h2>
+        <h1>Contact Us</h1>
 
-                    <form >
-                        
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Type your name here">
+        <div class="contact-grid">
 
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="www.example@gmail.com">
-                        
-                        <label for="contact">Phone Number</label>
-                        <input type="text" id="number" name="number" placeholder="076-353538">
-                        
-                        <!-- <label for=""></label>
-                        <input type="text">
-                        
-                        <label for=""></label>
-                        <input type="text"> -->
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <p>+94 76 XXX XXXX</p>
+            </div>
 
-                        <label for="message">Tell Us</label>
-                        <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
-                    
-                        <button type="submit">Submit Inquiry</button>
-                    </form>
+            <div class="contact-card">
+                <h3>📧 Email</h3>
+                <p>info@yourcompany.com</p>
+            </div>
 
+            <div class="contact-card">
+                <h3>💬 WhatsApp</h3>
+                <p>Chat with us instantly</p>
+            </div>
+
+        </div>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <button class="inquiry-btn" id="openFormBtn">
+            Make an Inquiry
+        </button>
+
+    </div>
+</section>
+
+<!-- FORM MODAL (hidden by default) -->
+<section class="contact-form" id="formModal">
+    <div class="form-container">
+        <div class="form-content">
+            <span class="close-btn" id="closeFormBtn">&times;</span>
+            <h2>Make An Inquiry</h2>
+
+            <form>
+                <label>Full Name</label>
+                <input type="text" placeholder="Your name">
+
+                <label>Email</label>
+                <input type="email" placeholder="example@gmail.com">
+
+                <label>Phone</label>
+                <input type="text" placeholder="07X XXX XXXX">
+
+                <label>Message</label>
+                <textarea placeholder="Type your message..."></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+        
+                    <!-- Footer -->
+                    <footer class="footer">
+                <div class="footer-container">
+
+                    <div class="footer-section">
+                        <h3>Visit Us</h3>
+                        <p>Colombo, Sri Lanka</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <p>Phone: 1234567890</p>
+                        <p>Email: info@gmail.com</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Services</h3>
+                        <p>Website Development</p>
+                        <p>Social Media Marketing</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-        </section>
+
+                <div class="footer-bottom">
+                    <p>© 2026 NextGen Agency. All rights reserved.</p>
+                </div>
+            </footer>
+
+
+
     
+
+    <script src="index.js"></script>
+
 </body>
 </html>
