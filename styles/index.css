@@ -42,13 +42,22 @@ nav {
     margin: auto;
 }
 
-nav .logo img {
+.logo {
+    display: flex;
+    align-items: center;
+}
 
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -399,7 +408,9 @@ nav .logo img {
 
 @media (max-width: 600px) {
 
-
+    .logo img {
+        height: 40px;
+    }
 
     .hero {
         height: auto;
