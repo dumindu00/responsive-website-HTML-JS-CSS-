@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(33, 33, 95);
+    color: #fff;
+}
+
+header {
+    position: absolute;   /* key change */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+header.scrolled {
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: #FFF837;
+    font-weight: 700;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #FFF837;
+    text-decoration: none;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFF837;
+}
+
+
+
+
+
+
+.form-container {
+    /* display: none; */
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    overflow: auto;
+}
+
+.form-content {
+    background: #201b55;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color:   #FFF837;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-content input, .form-content textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-content textarea {
+    height: 100px;
+}
+
+.form-content input:focus, .form-content text:focus {
+    outline: none;
+    border-color:  #FFF837;
+}
+
+.form-content button {
+    padding: 12px;
+    background: #111;
+    color:  #FFF837;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.form-content button:hover {
+    background:  #FFF837;
+    color: #111;
+}
