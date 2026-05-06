@@ -38,3 +38,31 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled")
     }
 })
+
+
+
+
+
+
+
+
+
+
+const openBtn = document.getElementById("openFormBtn");
+const closeBtn = document.getElementById("closeFormBtn");
+const modal = document.getElementById("formModal");
+
+openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+// close when clicking outside form
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("active");
+    }
+});
