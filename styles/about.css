@@ -1,0 +1,333 @@
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(33, 33, 95);
+    color: #fff;
+}
+
+/* ========================= */
+/* HEADER + NAV */
+/* ========================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+header.scrolled {
+    position: fixed;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* NAV LAYOUT */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* LOGO LEFT */
+nav .logo {
+    flex: 1;
+}
+
+/* NAV LINKS RIGHT */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+/* LINKS STYLE */
+.nav-links a {
+    color: #FFF837;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* UNDERLINE HOVER EFFECT */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #FFF837;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* GLASS SECTION */
+/* ========================= */
+
+.description {
+    min-height: 100vh;
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* GLASS CARD */
+.glass-card {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0, 0.4);
+    text-align: center;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0, 0.6);
+}
+
+/* TITLE */
+.glass-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFF837;
+}
+
+/* TEXT */
+.glass-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #f1f5f9;
+}
+
+/* KEYWORDS */
+.glass-card strong {
+    color: #FFF837;
+}
+
+/* FINAL LINE */
+.highlight {
+    margin-top: 20px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFF837;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background: #111;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #FFF837;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #FFF837;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .glass-card {
+        padding: 35px 25px;
+    }
+
+    .glass-card h2 {
+        font-size: 2rem;
+    }
+
+    .glass-card p {
+        font-size: 0.95rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .description {
+        padding: 80px 15px;
+    }
+
+    .glass-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .glass-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .glass-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .highlight {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* HAMBURGER BUTTON */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+     nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        z-index: 1000;
+
+        /* hidden by default */
+        transform: translateY(-200%);
+        transition: 0.4s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+}
+
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
