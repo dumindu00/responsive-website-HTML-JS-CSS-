@@ -66,3 +66,34 @@ window.addEventListener("click", (e) => {
         modal.classList.remove("active");
     }
 });
+
+
+
+const form = document.querySelector(".form")
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault()
+
+
+    const data = {
+        fullname: document.querySelector("#fullName").value,
+        email: document.querySelector("#email").value,
+        phone: document.querySelector("#number").value,
+        message: document.querySelector("#message").value
+    }
+
+    const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+
+    if (res.ok) {
+        alert("Inquiry sent successfully!")
+        form.reset()
+    } else {
+        alert("Something went wrong.")
+    }
+})
